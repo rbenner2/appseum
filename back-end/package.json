@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "front-end": "cd front-end && npm start",
-    "back-end": "cd back-end && npm start",
+    "back-end": "cd back-end && nodemon index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run back-end\" \"npm run front-end\"",
     "heroku-postbuild": "cd front-end && npm install && npm run build"
   },
