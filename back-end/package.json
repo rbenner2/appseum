@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "front-end": "cd front-end && npm start",
+    "back-end": "cd back-end && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run back-end\" \"npm run front-end\"",
+    "heroku-postbuild": "cd front-end && npm install && npm run build"
   },
   "type": "module",
   "keywords": [],
